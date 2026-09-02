@@ -176,6 +176,11 @@ em{ font-style: italic; }
   background: linear-gradient(180deg, rgba(12,8,10,.66) 0%, rgba(12,8,10,.32) 58%, rgba(12,8,10,0) 100%);
   transition: opacity .35s ease; }
 .header.scrolled::before{ opacity:0; }
+/* Kaydırmadan önce (hero üstünde) yazılara ek okunabilirlik payı */
+.header:not(.scrolled) .logo-name,
+.header:not(.scrolled) .logo-sub,
+.header:not(.scrolled) .nav a,
+.header:not(.scrolled) .header-phone{ text-shadow: 0 1px 10px rgba(0,0,0,.45); }
 .header.scrolled{ background: rgba(250,244,241,.985); backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--line); }
 :root[data-theme="dark"] .header.scrolled{ background: rgba(29,22,26,.985); }
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .header.scrolled{ background: rgba(29,22,26,.985); } }
